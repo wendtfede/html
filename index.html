@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" initial-scale 1.0>
+	<link rel="stylesheet" type="text/css" href= "stylo.css">
+	<title>Simulador de factura</title>
+</head>
+<body>
+
+	<h1>Aqui puede simular el abono de su servicio de electricidad</h1>
+
+	<p>Aqui usted puede simular su consumo de electricidad completando el siguiente formulario
+	el resultado final incluira el monto a abonar por el consumo y el impuesto correspondiente
+	</p>
+
+	<input type="text" id="lecturaAnterior" placeholder="Lectura Anterior"><br>
+	<br>
+	<input type="text" id="lecturaActual" placeholder="Lectura Actual"><br>
+	<br>
+	<select id="opcion">
+		<option value="tipo consumidor">tipo consumidor</option>
+		<option value="residencial">residencial</option>
+		<option value="comercial">comercial</option>
+		<option value="industrial">industrial</option>
+
+	</select>
+	<br>
+	<br>
+
+	<button onclick="calcularCostoTotal()"type="Calcular consumo">Calcular Consumo</button> 
+	
+	<input type="reset" value="cancelar">
+
+
+	<p>Kw consumidos: <span id="consumo"></span></p>
+
+	<p>Precio kw: <span id="precioKw"></span></p>
+
+	<p>Cargo fijo: <span id="cargoFijo"></span></p>
+
+	<p>Impuestos: <span id="impuesto"></span></p>
+
+	<P>Costo total: <span id="costoTotal"></span></P>
+
+
+
+
+
+	<script  src="app.js"></script>
+
+
+</body>
+
+
+
+</html>
